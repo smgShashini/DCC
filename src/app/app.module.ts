@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsComponent } from './forms/forms.component';
 import { LoginFormComponent } from './forms/login-form/login-form.component';
 import { RegisterFormComponent } from './forms/register-form/register-form.component';
+import { MemberComponent } from './team/member/member.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
     FormsComponent,
     LoginFormComponent,
     RegisterFormComponent,
+    MemberComponent,
   ],
   imports: [
     BrowserModule,
