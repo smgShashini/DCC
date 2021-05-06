@@ -1,0 +1,38 @@
+.body-left {
+  float: left;
+
+  width: 70%;
+}
+.body-right {
+  float: left;
+  width: 30%;
+}
+h1 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: blue;
+}
+.col-sm {
+  display: flex;
+  justify-content: center;
+}
+.date-picker {
+  display: flex;
+  justify-content: center;
+}
+.sp-drop {
+  display: flex;
+  justify-content: center;
+}
+.s-btn {
+  margin-top: 15px;
+}
+
+.doc-list-table {
+  text-align: center;
+  background-color: rgb(238, 130, 205);
+}
+
+.sub-title {
+  margin-top: 10px;
+}
