@@ -9,4 +9,8 @@ export class SplistingService {
   getAllSpecializations(): Observable<string[]> {
     return this.http.get<string[]>('http://localhost:5000/api/specialization');
   }
+
+  getAllDoclist(): Observable<string[]> {
+    return this.http.get<string[]>('http://localhost:5000/api/Doctor/');
+  }
 }

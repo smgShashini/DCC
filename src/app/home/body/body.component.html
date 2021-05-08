@@ -7,10 +7,10 @@
     <div class="col-sm">
       <mat-form-field class="sp-drop" appearance="fill">
         <mat-label>Choose specializaton</mat-label>
-        <select matNativeControl>
+        <select matNativeControl (change)="selectChangeHandler($event)">
           <option value="" selected></option>
-          <option *ngFor="let sp of specializationList" value="{{ sp }}">
-            {{ sp }}
+          <option *ngFor="let sp of specializationList" value="{{ sp.id }}">
+            {{ sp.spName }}
           </option>
         </select>
       </mat-form-field>
@@ -28,9 +28,33 @@
     </div>
     <div class="col-sm">
       <div class="s-btn">
-        <button type="button" class="btn btn-primary">Search</button>
+        <button
+          (click)="displayAvailableDocList()"
+          type="button"
+          class="btn btn-primary"
+        >
+          Search
+        </button>
       </div>
     </div>
   </div>
-  <div class="doc-list-table">Available doctor table</div>
+  <div class="doc-list-table">
+    Available doctor table
+    <table>
+      <thead>
+        <tr>
+          <th>Doctor Name</th>
+          <th>Channel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let docName of filteredDocList">
+          <td>{{ docName.name }}</td>
+          <td>
+            <button type="button">Channel</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

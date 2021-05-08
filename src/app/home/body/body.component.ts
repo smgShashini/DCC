@@ -9,7 +9,12 @@ import { SplistingService } from 'src/app/services/splisting.service';
   styleUrls: ['./body.component.css'],
 })
 export class BodyComponent implements OnInit {
-  specializationList: string[] = [];
+  option: String = '';
+
+  specializationList: any[] = [];
+  docList: any[] = [];
+  filteredDocList: any[] = [];
+
   constructor(private splisting: SplistingService) {}
 
   ngOnInit() {
@@ -17,5 +22,25 @@ export class BodyComponent implements OnInit {
       this.specializationList = data;
       console.log(data);
     });
+  }
+
+  // Method to display search doc list
+  displayAvailableDocList() {
+    this.splisting.getAllDoclist().subscribe((data) => {
+      this.docList = data;
+      this.filterDoc(this.docList);
+    });
+  }
+  selectChangeHandler(event: any) {
+    this.option = event.target.value;
+  }
+
+  filterDoc(arr: any[]) {
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i].spId == this.option) {
+        this.filteredDocList.push(arr[i]);
+        console.log(arr[i].name);
+      }
+    }
   }
 }
