@@ -3,13 +3,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-facilities',
   templateUrl: './facilities.component.html',
-  styleUrls: ['./facilities.component.css']
+  styleUrls: ['./facilities.component.css'],
 })
 export class FacilitiesComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  saveUserDataToDb() {
+    console.log('User data is save to data base');
   }
-
 }

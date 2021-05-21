@@ -1,0 +1,21 @@
+<div class="popup">
+  <h1 mat-dialog-title>Hi {{ ruser.userName }}</h1>
+  <div mat-dialog-content>
+    <p>Your appointment was success</p>
+    <div>
+      <p>Appointment No:{{ newWait }}</p>
+      <p>Doctor Name:{{ rchannel.doc }}</p>
+      <p>Date:{{ rchannel.date }}</p>
+      <p>Room Number:_________</p>
+    </div>
+  </div>
+
+  <button
+    routerLink="/channel-form"
+    class="btn btn-outline-primary btn-sm"
+    type="button"
+    (click)="onClick()"
+  >
+    OK
+  </button>
+</div>

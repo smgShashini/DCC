@@ -1,11 +1,11 @@
-.body-left {
-  float: left;
-
-  width: 70%;
-}
 .body-right {
-  float: left;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: blue;
+  font-size: large;
   width: 30%;
+  height: 70%;
+  float: right;
 }
 h1 {
   text-align: center;
@@ -30,9 +30,36 @@ h1 {
 
 .doc-list-table {
   text-align: center;
-  background-color: rgb(238, 130, 205);
 }
 
 .sub-title {
   margin-top: 10px;
+}
+
+.gap {
+  height: 10px;
+}
+.sp-drop {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.date-picker {
+  font-family: "Times New Roman", Times, serif;
+}
+.bottom {
+  height: 20px;
+  margin-bottom: 20%;
+}
+.footer {
+  height: 50px;
+}
+
+footer {
+  background: #42a5f5;
+  color: white;
+  line-height: 50px;
+  padding: 0 20px;
+}
+.col-sm {
+  font-family: "Times New Roman", Times, serif;
 }

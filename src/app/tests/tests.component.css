@@ -1,0 +1,14 @@
+mat-list-item {
+  background-color: lightblue;
+  text-align: left;
+}
+.gap {
+  height: 30px;
+  background-color: black;
+}
+.test-heading {
+  background-color: white;
+  font-size: 30px;
+  color: blue;
+  font-family: "Times New Roman", Times, serif;
+}
