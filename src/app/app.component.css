@@ -1,0 +1,8 @@
+.body {
+  height: 70%;
+  box-sizing: border-box;
+  margin: 0;
+}
+.footer {
+  height: 20%;
+}

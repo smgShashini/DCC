@@ -1,0 +1,7 @@
+.bottum {
+  background-color: blue;
+}
+.tile {
+  flex: top;
+  padding-top: 10px;
+}

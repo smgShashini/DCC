@@ -1,0 +1,12 @@
+.popup {
+  height: 300px;
+  width: 400px;
+}
+
+p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

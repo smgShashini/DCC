@@ -1,0 +1,14 @@
+.cardhead {
+  color: blue;
+  font-family: "Times New Roman", Times, serif;
+  font-size: small;
+}
+.facItem {
+  height: 50px;
+  width: 200px;
+  background-color: lightblue;
+}
+
+.body {
+  background-color: aqua;
+}

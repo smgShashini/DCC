@@ -1,0 +1,68 @@
+<!--
+  [Component Name]: BodyComponent
+  [Description]   : Display the body UI
+  [Actions]       : A0 - Search for a doctor
+                    A1 - Channel a doctor
+                    A2 - Route to TeamComponent
+
+-->
+
+<h1>Channel your doctor</h1>
+
+<div class="row">
+  <div class="col-sm">
+    <mat-form-field class="sp-drop" appearance="fill">
+      <mat-label>Choose Specializaton</mat-label>
+      <select matNativeControl (change)="selectChangeHandler($event)">
+        <option value="" selected></option>
+        <option *ngFor="let sp of specializationList" value="{{ sp.id }}">
+          {{ sp.spName }}
+        </option>
+      </select>
+    </mat-form-field>
+  </div>
+  <div class="col-sm">
+    <mat-form-field appearance="fill">
+      <mat-label>Pick a date</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        (dateInput)="addEvent('input', $event)"
+        (dateChange)="addEvent('change', $event)"
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="col-sm">
+    <div class="s-btn">
+      <button
+        (click)="displayAvailableDocList()"
+        type="button"
+        class="btn btn-outline-primary btn-sm"
+      >
+        Search
+      </button>
+    </div>
+  </div>
+</div>
+<div *ngIf="displayTable" class="doc-list-table">
+  <table class="table table-striped">
+    <thead></thead>
+    <tbody>
+      <tr *ngFor="let docName of filteredDocList">
+        <td>{{ docName.name }}</td>
+        <td>
+          <button
+            routerLink="/channel-form"
+            class="btn btn-outline-primary btn-sm"
+            type="button"
+            (click)="channelDocActions(docName.name)"
+          >
+            Channel
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

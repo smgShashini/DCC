@@ -1,0 +1,25 @@
+<!--
+  [Component Name]: MainBodyComponent
+  [Description]   : Display the main body which is combination of
+                    LeftBodyComponent, TestComponent and FooterComponent
+  [Actions]       : A0 - Search for doctor
+
+
+
+-->
+
+<mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-tile [colspan]="3" [rowspan]="5">
+    <div class="tile">
+      <app-left-body> </app-left-body>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="5">
+    <div class="tests"><app-tests></app-tests></div>
+  </mat-grid-tile>
+  <mat-grid-tile class="bottum" [colspan]="4" [rowspan]="1">
+    <div>
+      <app-footer></app-footer>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
