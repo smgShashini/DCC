@@ -16,7 +16,9 @@ namespace backend.Data
         {
         }
         public DbSet<Specialization> Splist { get; set; }
-        public DbSet<Doctor> Doctors { get; set; }
+        public DbSet<Doctor> Doctor{ get; set; }
+
+        public DbSet<User> Users { get; set; }
 
     }
 }

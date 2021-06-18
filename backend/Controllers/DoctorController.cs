@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace backend.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class DoctorController : ControllerBase
     {
@@ -19,18 +19,32 @@ namespace backend.Controllers
             this.dc = dc;
         }
 
-        //Http get method here
 
 
+        //Get all doctors
         [HttpGet]
-        public async Task<IActionResult> GetDocList(int id)
+        public async Task<IActionResult> GetDocList()
         {
-            var doclist = await dc.Doctors.
-               FromSqlRaw(@"SELECT * FROM Doctors ").
-               ToListAsync();
+            var doclist = await dc.Doctor.ToListAsync();
             return Ok(doclist);
 
 
+        }
+
+
+        //Get requested doctors
+        [HttpGet("get/{id}")]
+        public async Task<IActionResult> GetReqDocList(int id)
+        {
+            
+            
+
+            var queryLondonCustomers = from doc in dc.Doctor
+                                       where doc.SpId ==id
+                                       select doc;
+            
+
+            return Ok(queryLondonCustomers.Count());
         }
 
 
