@@ -80,7 +80,7 @@ const appRoutes: Routes = [
     NgbModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot([{ path: '', component: HomeComponent }]),
     MatGridListModule,
     MatCardModule,
     MatDatepickerModule,
